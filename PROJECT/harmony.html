@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASTROLOJY and HOROSCOPE</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+   <link type="text/css" rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="alfa.css">
+</head>
+<body>
+    
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark p-md-3">
+        <div class="container">
+          <a class="navbar-brand" href="/index.html">Web - Astro</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+  
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="mx-auto"></div>
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link text-white" href="/2022.html">2022 Astrology</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="/zodiac.html">Your Zodiac</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="harmony.html">Zodiac Harmony</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="/contact.html">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+
+      <img  class="monthly-pic" style="width: 100%; opacity: 0.9;" src="/images/uyum.jpg" alt="">
+
+
+
+      <div class="entrance">
+        <div class="yourzodiac">
+           <label>Your Zodiac:</label>
+            <select name="Your Zodiac" id="first">
+                <option value="Aquarius">Aquarius</option>
+                <option value="Pisces">Pisces</option>
+                <option value="Aries">Aries</option>
+                <option value="Taurus">Taurus</option>
+                <option value="Gemini">Gemini</option>
+                <option value="Cancer">Cancer</option>
+                <option value="Leo">Leo</option>
+                <option value="Virgo">Virgo</option>
+                <option value="Libra">Libra</option>
+                <option value="Scorpio">Scorpio</option>
+                <option value="Sagittarius">Sagittarius</option> 
+                <option value="Capricorn">Capricorn</option>  
+          </select>
+        </div>
+
+        <div class="another-zodiac">
+            <label>Her or His Zodiac:</label>
+             <select id="second">
+                 <option value="Aquarius">Aquarius</option>
+                 <option value="Pisces">Pisces</option>
+                 <option value="Aries">Aries</option>
+                 <option value="Taurus">Taurus</option>
+                 <option value="Gemini">Gemini</option>
+                 <option value="Cancer">Cancer</option>
+                 <option value="Leo">Leo</option>
+                 <option value="Virgo">Virgo</option>
+                 <option value="Libra">Libra</option>
+                 <option value="Scorpio">Scorpio</option>
+                 <option value="Sagittarius">Sagittarius</option>  
+                 <option value="Capricorn">Capricorn</option>   
+            </select>
+         </div>
+     
+         <button onclick="findharmony()">Harmony</button>
+        </div>
+      
+        <div class="harmony-result" >
+          <div id="harmony-result" class="inline-result">
+          </div>
+         </div>
+
+
+
+
+
+
+      <div class="footer-basic">
+        <p class="copyright">Murat Anıl Varol © 2022</p>
+    </div>
+      
+
+  
+  <script>
+  
+    const nav = document.querySelector('nav');
+    window.addEventListener('scroll', function () {
+    if (window.pageYOffset > 500) {
+      nav.classList.add('bg-dark', 'shadow');
+    } else {
+      nav.classList.remove('bg-dark', 'shadow');
+    }
+  });
+
+ function findharmony() {
+ const firstzodiac = document.querySelector("#first");
+  const secondzodiac = document.querySelector("#second");
+  const result = document.querySelector("#harmony-result")
+
+  if(firstzodiac.value === "Aquarius" && secondzodiac.value === "Aquarius") {
+    result.innerHTML = "Although the relationship of two people from the same zodiac sign may seem easy, it may actually carry various difficulties. Although you understand each other best, not being able to embody this relationship, not being able to keep your feet on the ground, and keeping your ideas in the air can be a problem over time. However, you can take part in all kinds of social projects together, and you can work in associations, foundations and social organizations. It is highly likely that you have met and become close in such environments. A common social purpose and circle of friends, a common vision can keep your relationship alive and well.";
+  }
+  else if (firstzodiac.value === "Aquarius" && secondzodiac.value === "Pisces") {
+    result.innerHTML = "Although this union is not considered very good, it is not a bad relationship either. Pisces' creativity can be interesting to Aquarius. However, this interest cannot be permanent. Pisces can't make sense of these behaviors of Aquarius, who are in an uninterrupted search. Although Pisces found everything he was looking for in Aquarius, he could not endear himself to her. Since it is not easy to satisfy the skeptical Aquarius, this union, which goes through constant ups and downs, is doomed to self-destruct in the long run.";
+  }
+  else if (firstzodiac.value === "Aquarius" && secondzodiac.value === "Aries") {
+    result.innerHTML = "Attractive, friendly and lovable Aries are always attracted to Aquarius. Aries bring out their sense of adventure in the best way. There are many common themes. Their social lives will be hectic and they will not even be aware of the time together. Alone; In this relationship, Aries is more jealous and possessive than Aquarius. Although the freedom-loving Aquarius is uncomfortable with this situation, they balance their anger with their conservatism and conduct their relationship in every sense.";
+  }
+  else if (firstzodiac.value === "Aquarius" && secondzodiac.value === "Taurus") {
+    result.innerHTML = "Aquarius's interest in innovation and change can be counterproductive to conservative Taurus. Being the cube of knowledge, Taurus has a lot to tell and convey to Aquarius. Taurus strongly makes them feel the safe haven Aquarius has always sought in life. However, Aquarius' mischievous aspects of life can be offensive to Taurus. It is so difficult for Aquarius, who takes life to be funny, and Taurus, who takes life seriously to be together, that they suddenly break up one day, never to be together.";
+  }
+  else if (firstzodiac.value === "Aquarius" && secondzodiac.value === "Gemini") {
+    result.innerHTML = "An adventurous union from start to finish. It is an event in itself that Gemini, who is smart and smart like a genie, encounters someone who is at least as different as himself. In this togetherness, they erase their past experiences and live only themselves. However, they may also have some friction over time. Aquarius' inner feelings are deep and they hate superficiality. In fact, Gemini's changing moods are no stranger to him. All they have to do is be patient and wait. The future will be on their side and everything will develop as they wish.";
+  }
+  else if (firstzodiac.value === "Aquarius" && secondzodiac.value === "Cancer") {
+    result.innerHTML = "An emotionally withdrawn Cancer; What does he do next to Aquarius, you might think. That's right! While one does not necessarily say 'freedom', the other does not say 'no' to restricted and besieged life. However, Saturn-dominated Aquarius has a feature that is unfairly overlooked; they always have a mysterious and closed side that respects tradition. Although this half that they integrate with Cancer surprises some, they are happy with the way they are. Although this relationship is not a long-lasting relationship, both are happy as long as it is lived.";
+  }
+  else if (firstzodiac.value === "Aquarius" && secondzodiac.value === "Leo") {
+    result.innerHTML = "Here are two people opposite each other. Leo who loves to manage; As soon as she is attracted to Aquarius, she looks for ways to get it. Perhaps she had never met a mysterious and libertarian person. Aquarius has quiet stubbornness. Leo will realize that no matter what he does, it will be very difficult to get Aquarius's favor. But he has it on his head once. While Aquarius continues to fascinate him with his careless demeanor, a contentious love that looks like a game begins between them. The continuity of their love also depends on their mutual concessions.";
+  }
+  else if (firstzodiac.value === "Aquarius" && secondzodiac.value === "Virgo") {
+    result.innerHTML = "For a cheerful, lively and innovative Aquarius, Virgo is very meticulous. Aquarius are impressed as soon as they see Virgos who live by their own rules, and they feel drawn to their bright and interesting minds. Again, thanks to Virgos, they can establish solid friendships. The mysterious appearance of Aquarius, often beyond their place and time, also affects Virgos. They have so much fun together. Their relationship may end because active Aquarius are tired of this relationship.";
+  }
+  else if (firstzodiac.value === "Aquarius" && secondzodiac.value === "Libra") {
+    result.innerHTML = "Aquarius's idiosyncratic frenzy attracts Libra's fascination and they make an ideal couple. Charming and personable, Libra's grace is legendary. Emotion and romance occupy a large part of his life. Fully attached and selfless when loved, Libras are the best companions for Aquarius. One of the most beautiful aspects of this union is that both of them are fond of their freedom and know no bounds in their creativity. In the long run, their relationship creates a perfect picture.";
+  }
+  else if (firstzodiac.value === "Aquarius" && secondzodiac.value === "Scorpio") {
+    result.innerHTML = "Aquarius, who is fond of innovations and changes in the air group, is the opposite of Scorpio. No matter how well-intentioned they may be, they always contradict each other. Their high intelligence and perceptive powers relation them together. They are strangely frightened of each other and their behavior is respectful. The common denominator they have created due to the dominance of Scorpio in financial matters strengthens their relations. If they can overcome the contradictions between them in time, they can share a lifelong togetherness.";
+  }
+  else if (firstzodiac.value === "Aquarius" && secondzodiac.value === "Sagittarius") {
+    result.innerHTML = "Although it seems like a fun relationship in every way, it is not that simple. These two, who are fond of their freedom and love to change, have a lot of parameters that they agree with. Even though their pace of life creates a reaction, these two continue to pursue new discoveries regardless of anything. While the breath exhibits a togetherness with the breath, they play with life. Sagittarius, who don't place much value on money matters, take a step back when they see the materialistic side of Aquarius sometimes emerging. But they maintain this togetherness with their strong logic.";
+  }
+  else if (firstzodiac.value === "Aquarius" && secondzodiac.value === "Capricorn") {
+    result.innerHTML = "A relationship that is difficult to analyze. Capricorn, who takes firm steps forward and takes life seriously, and Aquarius, who aim to make the world the best place to live, have very little in common. Goat; No matter what the subject is, Aquarius want it to be more diligent and serious, while Aquarius have a hard time understanding it. Capricorn, who needs a lot of support for their joint togetherness, cannot get this attention from Aquarius. While they can't understand Aquarius' communication with their environment, they display an unpromising togetherness.";
+  }
+
+
+  else if (firstzodiac.value === "Pisces" && secondzodiac.value === "Aquarius") {
+    result.innerHTML = "Although this union is not considered very good, it is not a bad relationship either. Pisces' creativity can be interesting to Aquarius. However, this interest cannot be permanent. Pisces can't make sense of these behaviors of Aquarius, who are in an uninterrupted search. Although Pisces found everything he was looking for in Aquarius, he could not endear himself to her. Since it is not easy to satisfy the skeptical Aquarius, this union, which goes through constant ups and downs, is doomed to self-destruct in the long run.";
+  }
+  else if (firstzodiac.value === "Pisces" && secondzodiac.value === "Pisces") {
+    result.innerHTML = "They must learn to live without drowning in their own emotional sea. They don't have any other chance anyway. They are the ones who understand each other's world best. Instead of making life difficult, they should prefer to make it easier. They will find the common denominators in the best way over a long period of time. An intense and deep love with everything. Jealousy and sharing will make a good combination together and everything will be fine if they don't make their love pathological. They'll both have plenty of time to explore each other anyway.";
+  }
+  else if (firstzodiac.value === "Pisces" && secondzodiac.value === "Aries") {
+    result.innerHTML = "The plain world of Aries can be very contradictory to Pisces. While he was dreaming of a life as if he were dancing, he was faced with a harsh and secretive world. Moreover, Aries is not the kind of person to hand him a handkerchief when he is sad and crying. Despite all their good intentions, both cannot understand each other's worlds. It is a mistake to think that you can accompany a Pisces to the active nature of the coach. Despite all your good intentions, it is impossible for this relationship to last a lifetime. They already understand that everything will be unfinished. They say 'Goodbye' to this togetherness and leave silently.";
+  }
+  else if (firstzodiac.value === "Pisces" && secondzodiac.value === "Taurus") {
+    result.innerHTML = "In the beginning everything is normal. Everything is as it should be. Known tasks are shared. Everyone has their own responsibility. It is a colorless, odorless and indisputable union. They create toxins in the long run, and they begin to show unreasonable reactions to each other. They don't know why they started something that was impossible. While saying goodbye to each other with thousands of question marks in their heads, Pisces' tears can't turn Taurus off the road.";
+  }
+  else if (firstzodiac.value === "Pisces" && secondzodiac.value === "Gemini") {
+    result.innerHTML = "The brilliance of Pisces may seem interesting to Gemini at first. Curious Gemini is always on the lookout. One day, a strange Fish is caught in his fishing line. He has no time for her. Despite everything, she has a good time with him. Gemini is an earth person. Pisces is a love hero of his own mystical world. Dreams, on the other hand, always remain in fairy tales. No matter how hard the Pisces tries, it cannot direct the Gemini as it wishes. Whatever he does, Gemini has already started preparing for the road. She can't do anything but say good-bye to him..";
+  }
+  else if (firstzodiac.value === "Pisces" && secondzodiac.value === "Cancer") {
+    result.innerHTML = "Master swimmers of familiar seas do not feel strange when they meet. They are underwater heroes. They get along without speaking, feeling that they are drawn to each other with lightning speed. Other people's worlds are foreign to them. Now they have found the love they missed. They are the witnesses of the feelings we have forgotten. The happiness of these couples who agree on every subject is like a movie to watch. Everything goes perfectly, except the fits of jealousy. It's impossible not to have that many flaws.";
+  }
+  else if (firstzodiac.value === "Pisces" && secondzodiac.value === "Leo") {
+    result.innerHTML = "Sometimes, unreasonable loves happen. It develops suddenly. It's a feeling they can't name. It's like the inseparable fusion of opposite personalities reminiscent of Night and Day. The brilliance of Pisces is combined with the radiance of Leo. Gorgeous decor, perfect game. Every game has an ending. The lights go out, and the curtain closes. What remains is a beautiful scenario and the heroes we always want to see on stage. This love must end, and believe me, it will be better to be remembered than to live it.";
+  }
+  else if (firstzodiac.value === "Pisces" && secondzodiac.value === "Virgo") {
+    result.innerHTML = "It is impossible for a Virgo to consciously fall in love with a Pisces. They are people of reverse coordinates. Whichever button you press gives the wrong sound. Pisces are born to be parents. He uses his sensuality in high doses. Virgo, on the other hand, is designed to be an important person in the business world. The result is disappointment for both. But the stubborn Pisces may not want to give up on this relationship. The result will develop against their wishes. Everything will one day be a thing of the past.";
+  }
+  else if (firstzodiac.value === "Pisces" && secondzodiac.value === "Libra") {
+    result.innerHTML = "Both of them came to the world to know love. They are candidates to be 'Love Story'. Together, they experience all kinds of love. Tears, goodbyes, reunions, and romance are abundant in this movie. They get so caught up in this togetherness that when they discover that there are other people in life, it is too late. The expected development in this love, where the feelings are shared, will not give the desired result. While the love is interrupted somewhere, neither is the culprit. There is no crime at all.";
+  }
+  else if (firstzodiac.value === "Pisces" && secondzodiac.value === "Scorpio") {
+    result.innerHTML = "They are the love magicians of the mystical world. The worlds of both are very different and they discover the difference in each other. Only in this love tears are more than happiness. Pisces gets its fair share from Scorpio's hard exits. All the elements of love are completed with the addition of jealousy feelings to this relationship, which is somewhat sexual. It doesn't matter who is right in this relationship that will have ups and downs for a lifetime. The only real thing is they'll have a lot of time to talk and argue. It's probably best to leave them alone.";
+  }
+  else if (firstzodiac.value === "Pisces" && secondzodiac.value === "Sagittarius") {
+    result.innerHTML = "Pisces' hypersensitivity is very strange to Sagittarius. Sagittarius, who are people of reason and logic rather than emotion, want to continue life without dramatizing it. Pisces' addiction feels like an unnecessary responsibility to Sagittarius. There is too much trouble in life anyway. For Sagittarians who enjoy 'hit and run', Pisces is a heavy burden to carry. A difficult process begins for the fish, who believe that one day everything will be perfect. If they only knew, Yayla would never wait for this union to happen again? Maybe they would stubbornly continue?";
+  }
+  else if (firstzodiac.value === "Pisces" && secondzodiac.value === "Capricorn") {
+    result.innerHTML = "Here is the ideal couple. Everyone is satisfied with their job. Capricorn has built his life according to his business life. Material matters are a part of his life. His goal is to be successful, to prove himself. Pisces has no objection to this. All he seeks is trust, and Capricorn provides that trust in the best way possible. Everything is fine in this union. Even if the feelings are different, the path they go is the same. Both adopt this union. As the years pass, there will be a more meaningful love. You won't regret choosing each other.";
+  }
+
+
+  else if (firstzodiac.value === "Aries" && secondzodiac.value === "Aquarius") {
+    result.innerHTML = "Attractive, friendly and lovable Aries are always attracted to Aquarius. Aries bring out their sense of adventure in the best way. There are many common themes. Their social lives will be hectic and they will not even be aware of the time together. Alone; In this relationship, Aries is more jealous and possessive than Aquarius. Although the freedom-loving Aquarius is uncomfortable with this situation, they balance their anger with their conservatism and conduct their relationship in every sense.";
+  }
+  else if (firstzodiac.value === "Aries" && secondzodiac.value === "Pisces") {
+    result.innerHTML = "The plain world of Aries can be very contradictory to Pisces. While he was dreaming of a life as if he were dancing, he was faced with a harsh and secretive world. Moreover, Aries is not the kind of person to hand him a handkerchief when he is sad and crying. Despite all their good intentions, both cannot understand each other's worlds. It is a mistake to think that you can accompany a Pisces to the active nature of the coach. Despite all your good intentions, it is impossible for this relationship to last a lifetime. They already understand that everything will be unfinished. They say 'Goodbye' to this togetherness and leave silently.";
+  }
+  else if (firstzodiac.value === "Aries" && secondzodiac.value === "Aries") {
+    result.innerHTML = "An Aries; when he or she meets someone like himself or herself, a very interesting situation arises. They are both jealous, emotional, fiery and executive types. The sense of independence is intense in both. A war for supremacy will soon begin between them. One of them starts to work hard to crush the other. Their priorities start to become a pleasurable pursuit for them, and then they turn into endless wars between them. This togetherness, which turns into an adventurous relationship full of confusion and interesting contrasts, is worth living. In time, it will be a pleasant love for both of them. They will make the people around them watch a movie script, and they will be the target of the words 'How is your love going' by their friends and colleagues. If they get a chance to get married by being patient, they will become the elder sister and older brother of their children. They will never be a classic family and will always manage to stay young.";
+  }
+  else if (firstzodiac.value === "Aries" && secondzodiac.value === "Taurus") {
+    result.innerHTML = "You, as an Aries, always have a chance to find happiness with Taurus. He will know your worth and you will discover his different features. Taurus likes calm and serenity. Therefore, he may find the fiery and active life of Aries strange later on. Moreover, a Taurus is always possessive and suspicious. Aries likes high-quality and high-quality people. Taurus can respond wholeheartedly to ardent sexual desires and strong desires. The only problem between them is that Aries' freedom songs never end and Taurus pushes their fixed aspects quite a bit. If this relationship is shaped by logic, it will settle itself in time. The calm harbor of the old years will prevent the storm of the youth years. A relationship worth trying.";
+  }
+  else if (firstzodiac.value === "Aries" && secondzodiac.value === "Gemini") {
+    result.innerHTML = "Here is an original and unusual relationship. As a result of the meeting of two smart and cheerful people, a strong love is born between them. Combination of fire and air, this union has everything. The Gemini man is versatile and never gets bored when the other person is with him. As a Coach, you; With your curious and active nature, you will find a lot in common in Gemini and you will say 'Here is the love I'm looking for'. But if you're a persistent Aries person, you may find Gemini to walk away from you in a short time. To be decisive in your posts, places you visit, your tastes and decide on its behalf; Remember, it's one of the biggest mistakes you can make. For Gemini, jealousy is extremely repulsive and intolerable. He knows that the feeling of freedom is important and he never wants to compromise on this issue. If you are confident in yourself, start this relationship. Or! forget it.";
+  }
+
+  else if (firstzodiac.value === "Aries" && secondzodiac.value === "Cancer") {
+    result.innerHTML = "Together with a Cancer symbolizing emotions and feelings; It is very interesting, yet very difficult. The crab is touchy and fragile. He will misunderstand everything you say and will be offended by you. Because he doesn't forget anything. However, you; You are a person who never holds grudges, gets angry and forgets everything instantly. Moreover, a Cancer is dependent on habits and cannot adapt to your changeable psyche. While you are wandering around the creek, he will prefer to rest in the shade of trees and by the water, while you deal with the realities of life, he will wander in the world of dreams. Occasionally, your world may converge and satisfy your emotional need with it. But one day, even if you don't want it, the love between you will wear off. If you can wait; this relationship will become more beautiful, flourish and develop at the middle age limit. Those who enjoy the morning sun will love the evening sun even more.";
+  }
+
+  else if (firstzodiac.value === "Aries" && secondzodiac.value === "Leo") {
+    result.innerHTML = "Here is one of the rare relationships. You are dealing with a person who is just like you. He is cheerful, loving life, fun-loving, innovative, generous, and just as proud as you are. You complement each other in everything. Leo enjoys power and respect. Moreover, he should know that he is loved and should be honored. an Aries; always responds to the value given to it and does not let you down. Living with a Leo is not easy, but with time you will achieve all kinds of harmony. You have to experience this togetherness in order to complete each other in every sense. Even if it ends in separation, it is a togetherness that will have great memories in your life. Let everything live as it is.";
+  }
+  else if (firstzodiac.value === "Aries" && secondzodiac.value === "Virgo") {
+    result.innerHTML = "It may surprise some of you to think of you together with a Virgo, for whom details matter a lot and who takes life seriously. So, how will an interesting structure that can't stand still spend time with a Virgo? Different aspects of it may catch your attention. You may even be strongly influenced by his attractive personality. His fine tastes and importance to material values, his calm demeanor and his calm nature can be boring for a type like you who accepts life as it is. Moreover, he is a total workaholic. His life is orderly and disciplined. He likes to live by day, you by night. Your paths may meet in this world. You may like each other's physical features. But all you have to do is shake hands and say goodbye after a short flirtation.";
+  }
+  else if (firstzodiac.value === "Aries" && secondzodiac.value === "Libra") {
+    result.innerHTML = "Here's a perfect relationship for your opposite sign Libra. The moment you see it, you will feel that you are at the beginning of a magical love. Because he is the beloved that you have dreamed of for years. Charming, gentle, seductive, elegant and romantic. While he extends his hands to you and invites you to his own world, you are already ready to immerse yourself in his arms. Your active nature may be against him, but in the face of his orderly and calm personality, you will withdraw and surrender yourself to him. There is such a great love between you that you will learn to accept your flaws as they are, and you will enjoy a perfect togetherness. Forget about the occasional flying glasses and remember that every hill can have a descent. No one can say negative about this relationship.";
+  }
+  else if (firstzodiac.value === "Aries" && secondzodiac.value === "Scorpio") {
+    result.innerHTML = "Here is one of those relationships that will challenge you. You both have the piercing rages of Mars and an equally charming and irresistible charm. As if the madman leaves the stick in his hand when he sees the madman, the moment you see each other, the fire has already started between you. All that remains is to enjoy watching this fire and wait for it to go out. Sooner or later this love will end one day and will be replaced by love. Scorpio's jealousy can be balanced by your honest approach. It may take a long time to turn a stormy youth into a calm sea. One day, when everything will be calm, you will think of the past like a movie. We call this difficult relationship worth living. Try and hold on tight to your love, don't give up.";
+  }
+  else if (firstzodiac.value === "Aries" && secondzodiac.value === "Sagittarius") {
+    result.innerHTML = "One of the special relationships of the zodiac. A love that will make the stars jealous. We hope that the evil eye is never worth it. You will experience a love away from the evil eye. You are both hot and excited. You get tired of everything very quickly and you rush to innovations. But while going through all this, you never let go of each other's hands. Only one thing can spoil this beautiful mix. You Aries are pretty jealous. Ruling a Sagittarius is the only thing not to do in the world. And he's even more honest than you. He can be incredibly irritable, thinking you don't trust him by being jealous. In such a situation, all you have to do is to forgive yourself. How?.. In a humorous way and by being funny. Otherwise, you have no other choice.";
+  }
+  else if (firstzodiac.value === "Aries" && secondzodiac.value === "Capricorn") {
+    result.innerHTML = "For a person like you who is mischievous and makes fun of life, and who is so committed to life and ready for change, the Capricorn person is utopian and just as different. Seriousness and logic prevail in his views on life. While his feet are firmly on the ground, your feet do not touch the ground. You really don't know what to do with this skeptical, vindictive, and distrustful person. Even its traditional structure is a problem for a person like you living the day. It is best to say goodbye to each other after a little try at the beginning of this togetherness. If there is love between you based on physical attraction, it will be difficult to break up and you will wear each other down. The increase in pathological problems will make you both more upset. Sometimes it is much more meaningful and beautiful for a love to remain in the memories.";
+  }
+  
+
+  else if (firstzodiac.value === "Taurus" && secondzodiac.value === "Aquarius") {
+    result.innerHTML = "Here is one of the people you should stay away from. We do not know where this person who sang songs of freedom and independence got in your way, but you must change your ways as soon as possible. It is almost impossible for you to understand this person who is extremely intelligent and has a very high intelligence level. You're sure to never speak the same language. Even if you adore the very attractive Aquarius, you must restrain your emotions. He will upset you, will not understand, will make you angry, and moreover, he will not do this on purpose. Your way of looking at life is so different that it will be necessary to pity your twin in this regard. Because you have no fault other than meeting on the same road. So shake hands like two gentleman athletes and say goodbye to each other and forget what happened between you.";
+  }
+  else if (firstzodiac.value === "Taurus" && secondzodiac.value === "Pisces") {
+    result.innerHTML = "Pisces is a calm person who lives in his own world. The artist has a soul and perceives life differently. It may take a lot of effort to enter his world. Even speaking the same language will take a long time. He will try to adapt to you, learn to swim in unfamiliar seas. Since the instinct of protection is too much, he will want to take shelter in you. If you make him feel that your sense of ownership is intense, he will never want to leave you. Will he be able to extinguish the fire of passion in you? Or is it a high-energy love? If you say yes to his pessimistic dream world, stay there and don't complain later.";
+  }
+  else if (firstzodiac.value === "Taurus" && secondzodiac.value === "Aries") {
+    result.innerHTML = "Aries people are hot and you will be impressed the moment you see them. You can be mesmerized by his confident demeanor and relaxed movements. But he likes to act liberal and maverick. He makes his own decisions. Everything is beautiful before and you can become its satellite. Then the irrepressible arguments begin between you. He may become enraged by your patient behavior. For an Aries who wants to do what they think on the fly, you can be blamed for being too slow-moving. Your sense of ownership may clash with his instantaneous expression of jealousy. After endless battles, this love can fade on its own as soon as sexual attraction ceases. Of course, if you have a solid place by then. Post-war peace is almost impossible for you. These people who love matter will put money on the back burner when they fall in love. These people always have love in their hearts.";
+  }
+  else if (firstzodiac.value === "Taurus" && secondzodiac.value === "Taurus") {
+    result.innerHTML = "You create a couple that complements each other in every sense. Since he is also a Taurus, he will evaluate your every move in a meaningful way and will give importance to sharing. He is fiery and passionate just like you. He agrees with you about sex and life. They care about beauty and home. You share everything and support each other. But later on, your relationship will start to become too calm and routine. You can both seek new excitements. Especially male Taurus can dream of ardent love. As soon as they find a lover to make their blood boil, they begin to live their great love. There is only one thing left for the rest, to sit and wait for the lover to return.";
+  }
+  else if (firstzodiac.value === "Taurus" && secondzodiac.value === "Gemini") {
+    result.innerHTML = "It's a contradictory relationship in every sense. You are the earth group, it is air. How can your fixed values ​​be compatible with its variable nature? You're sure to like it a lot. It will distract you, make you laugh and cause you to meet new people. Moreover, all the people around him are as interesting and extraordinary as he is. You will enjoy being with him. Soon, when the alarm bells start to ring, the truth will be revealed in all its nakedness. It is not possible for your fixed thinking to be understood by its variable structure. Moreover, a Gemini can never be as hot as a Taurus. Before your little frictions cause big fights, all you have to do is end this friendly relationship by talking to each other. It's not possible for you Taurus to stay friends with ex-flirts though.";
+  }
+  else if (firstzodiac.value === "Taurus" && secondzodiac.value === "Cancer") {
+    result.innerHTML = "Here is a harmonious water-earth mixture relationship. No one will object to the love of an emotionally touchy and homely Cancer and a steadfast, affectionate and over-loving Taurus. Moreover, a Cancer who truly loves is extremely hot and fiery. It responds to your every wish and does not expect anything in return. You both have an instinct for altruism and protection. He will support you in everything and will not let you down. The only thing that hurts this beautiful union is that he will never want you to humiliate him in public. If you make such a mistake as a Taurus, he will be offended at you, but he will not show it. A lot of things will be missing from your love, it won't make you feel. Perhaps years later he will make a small confession to you. Say what ?..";
+  }
+  else if (firstzodiac.value === "Taurus" && secondzodiac.value === "Leo") {
+    result.innerHTML = "Here is one of your favorite people standing in front of you. The moment you meet a Leo, you feel drawn towards him. The lover, spouse, love you are looking for is in front of you, preparing to attract you with all its fire and friendly smile. He also likes superior people like you. Moreover, he is as stable and proud as you are. He is very ambitious and wants the best of everything. He does not like to hide his capricious and restless aspects. He gives orders but does not take them. This relationship will go best if you manage to curb your jealousy as a Taurus. Because he's too proud to say he's jealous of you. Praise him and honor his wishes. Believe me, you will be an ideal couple that everyone watches with envy. A relationship that will last a lifetime awaits you.";
+  }
+  else if (firstzodiac.value === "Taurus" && secondzodiac.value === "Virgo") {
+    result.innerHTML = "You shouldn't be surprised when you come across a Virgo person who is an earth group just like you. At first, you may think that you share the same tastes. Then you will realize that you were wrong and you will have to falter for a long time. You have an emotional and fiery nature. He is systematic and distant. He does not experience intense sexual feelings and does not always respond to your requests. Also, be ready and expect to be criticized by him at any time. If you are still saying the beloved that I am stubbornly looking for, leave everything to time. If her disciplined aspects continue to interest you, and you like her smart and practical wit, there is hope in this relationship. Wait and see the results.";
+  }
+  else if (firstzodiac.value === "Taurus" && secondzodiac.value === "Libra") {
+    result.innerHTML = "The moment you see a Libra person you will feel impressed because they are a Venus person like you. She captivates those around her with her smile and grace. There are so many people who want to reach him, which is why his choices are always wrong and his mind is very confused. He learned at a young age that the most important feeling in his life was love. A great love begins between you and this tempting lover. This ardent and extraordinary love will make even God Eros jealous. But don't be jealous of him and just indulge him. Comply with their requests and don't ask questions. Here is a romantic love tale that will last you a lifetime. Be sure that the problems between you will dissolve very quickly in the face of your love.";
+  }
+  else if (firstzodiac.value === "Taurus" && secondzodiac.value === "Scorpio") {
+    result.innerHTML = "FYou can have a great love with a Scorpio person, but you should not think that you will always be happy with him. His fire and jealousy are twice as strong as yours. Your fixed structure remains flexible and soft next to it. He is a very difficult person and does not know how to forgive. His feelings are hidden deep inside. If you have met this person who does not like to talk, but has a very high sexual attraction, you have no chance to escape. In this relationship, anything will happen. There is an intense confusion of ardent desires and fierce jealousy. If your story were a book, it would probably top the charts, the movie would break the box office records. Then you have no choice but to live this relationship.";
+  }
+  else if (firstzodiac.value === "Taurus" && secondzodiac.value === "Sagittarius") {
+    result.innerHTML = "We do not advise you to approach the Sagittarius person at all. It's already so crowded around him that if he actually saw you, you'd be pretty lucky. With his charming, cute and cheerful demeanor and his intelligence that seduces even the devil, he will take you into his hands in an instant. Moreover, it does not take much effort to get you. Voluntary lover candidates are so many that they cannot understand where they are caught in the network. Everything is different with him. He can't stand still with his changeable, adventure-loving spirit. You become unable to do anything but argue all the time. Her fiery nature and your sex appeal. is the only common sharing between you. Despite everything, if you love and say that you will not give up, wait, it will settle in time. If you say that this victory is worth it, believe it. So wait.";
+  }
+  else if (firstzodiac.value === "Taurus" && secondzodiac.value === "Capricorn") {
+    result.innerHTML = "You get along well with a Capricorn man and you will be happy. Capricorn is suspicious and jealous, just like you. He scrutinizes everything and keeps his comments to himself. He is speech impaired and does not like to express his thoughts. He is careful and does not miss anything. He is materialistic and protects his interests just like you. Future security is important to him. You share a lot with each other. If you can make each other feel secure, there will never be a problem between you. Moreover, you will rise together in society and exchange mutual support. For this relationship, we can give any approval. For some, it may be too systematic love. But rest assured, you will be very happy.";
+  }
+
+
+ 
+  else if (firstzodiac.value === "Gemini" && secondzodiac.value === "Aquarius") {
+    result.innerHTML = "Here is an interesting, colorful and complementary combination. The Aquarius person will come across you in a very different way from others. He will easily understand every subject, with his cheerful and attractive personality, he will keep you entertained, intrigued and will open the doors of the world you do not know. On the other hand, it is imperative that you respond to it and display your superior qualities. When Aquarius comes across a Gemini person who can cope with himself, he will think of himself more than you, when he says yes to this intellectual union with all his heart. Believe me, he will think of himself more than you. He has never met such a unique person and will not want to miss this beautiful opportunity. Do not spoil the formula of this beautiful relationship and keep your relationship. Protect it with all your might. Believe me, it will all be worth it.";
+  }
+  else if (firstzodiac.value === "Gemini" && secondzodiac.value === "Pisces") {
+    result.innerHTML = "Here again, a difficult relationship with everything stands before you. What can a Pisces, the spokesman of emotions, do to a Gemini person who is smart and measures everything with his intelligence?... How will the poor Pisces endure, as your relationship progresses. we don't know. There is nothing you can do in the face of his endless flood of emotions and jealousy. Besides, a Pisces can never keep you busy. It has nothing to appeal to your mind. While you are solving life problems, He tries to tell you his dreams and dreams and you never listen to him. Küser is broken and withdraws into its own shell. This relationship signals danger very quickly. As a result, this love will definitely remain in the memories.";
+  }
+  else if (firstzodiac.value === "Gemini" && secondzodiac.value === "Aries") {
+    result.innerHTML = "At first glance, you may like the ardent Aries person who is cheerful, active, loves change, and enjoys innovations. The unimaginable joy of the coach envelops you in an instant. You may want to be with him at any moment, or even spend your whole day with him. At the end of the colorful days you live in a row, you come to your senses and you start to think about what to do. And when you have to make plans for the future, you go into deep thought. It is possible for you to falter and be frightened by the jealousy of the coach. Moreover, Aries is not as intellectual and cultured as you. He insists on getting hold of you. In this relationship, too, nothing may turn out the way you think. But don't mind. Your love may end and you may become a good friend.";
+  }
+  else if (firstzodiac.value === "Gemini" && secondzodiac.value === "Taurus") {
+    result.innerHTML = "A Taurus is never for you. For God's sake, what are you doing next to a person who is emotional, persistent, stubborn and does not like innovations? He will make all kinds of sacrifices for you and will offer you options to make your life easier to make you comfortable. You can feel safe and strong next to him. It will be hard for you to say no to a well-meaning Taurus who will fulfill your wishes immediately. Because he will want your freedom unconditionally in return. Everything that was tempting at first will disturb you later and you will want to get away from the environment you are in, throwing off all your possibilities, leaving behind a tearful and angry Taurus. Moreover, He is not one to forget what he has been through and will always remember you with anger.";
+  }
+  else if (firstzodiac.value === "Gemini" && secondzodiac.value === "Gemini") {
+    result.innerHTML = "A person with all the features you want is standing in front of you. If you are looking for a partner to truly accompany you, you can choose her. Your common features complement each other so much.. You will understand each other, share your feelings, and even make decisions together by thinking the same things. You will be a real mother and father who can be friends with your children. These two people, who have the same life goals and have established a special life for themselves, will follow with envy. Small stubbornness and arguments will also be the spice of your togetherness. A relationship that should never end.";
+  }
+  else if (firstzodiac.value === "Gemini" && secondzodiac.value === "Cancer") {
+    result.innerHTML = "The Cancer type will seem distant to you at first and you will struggle a lot. As a Gemini who cannot stand the restriction of your freedom, it is possible to falter in the face of the romantic and warm love of Cancer that surrounds you. You may be swept off your feet by his pampering and instant fulfillment of your every wish by falling on you. For a Gemini who is always fighting for his own wishes, this is an extremely unusual interest. If only this fairy tale continued like this, or for both of you, it would be better if you ended this love in its best place before it turned into a nightmare. But this love that you can't find the reason for will end one day. Cancer will suffer the most from this relationship. You will fly into your old life like butterflies.";
+  }
+  else if (firstzodiac.value === "Gemini" && secondzodiac.value === "Leo") {
+    result.innerHTML = "When you, dear Gemini, meet a Leo, an interesting situation will arise. Moreover, you are not inferior to him, you can turn the Lion's head with your charm and wit and ignite the emotion between you. An interesting and pleasant relationship has started between you. All eyes are now on you. Brain teasers, power struggles, witty speeches and songs of freedom continue throughout the day. Neither of you are willing to end this relationship. When you say let it go as long as it takes, you may find yourself in the arms of a long-term partnership or even marriage. As a tactless Gemini, this relationship will last a lifetime if you don't offend the Leo.";
+  }
+  else if (firstzodiac.value === "Gemini" && secondzodiac.value === "Virgo") {
+    result.innerHTML = "As the two of you, a Mercury person, you can be fascinated by each other's intelligence the moment you meet. Virgo's addiction to substance will disturb you. His fine calculations and meticulous attention to detail will complicate your life and make you angry. He likes to constantly criticize his surroundings. Your tongue is sharp and you immediately say what you think. There have already been alarms for a war among you that will make mind games jealous. Since you have no chance to escape, you must choose each other as shelter and learn the joy of sharing. You will find that you gain a lot when you try to agree with each other instead of fighting each other. You can even establish business partnerships together and reinforce your togetherness.";
+  }
+  else if (firstzodiac.value === "Gemini" && secondzodiac.value === "Libra") {
+    result.innerHTML = "One of the rare unions that astrology will not object to is waiting for you. You have never breathed the air harmony of Libra and Gemini so closely. This love, which they live as if they are dancing, will make everyone jealous and they will experience pleasant beauties with themselves and their surroundings. Libra will not envy you and will set you free. The aesthetics and beauty you seek are already there as a gift from God. There is nothing missing and you can continue this togetherness without questioning. Your versatile personality will gain even more wealth with Libra. As long as your variability and his whims do not coincide, you will have no major problems between you. You must protect the value of your love.";
+  }
+  else if (firstzodiac.value === "Gemini" && secondzodiac.value === "Scorpio") {
+    result.innerHTML = "There is room for everything in your life, but a Scorpio can never say. It is almost impossible to even predict at what point you will meet. We don't even want to think about Scorpio's reaction to your certain freedom. There may be physical attraction between you. Because it is impossible to resist the irresistible attraction of Scorpio. You will want to be close to him and you will miss being with him and his skin. What about then?... Arguments will continue between wars, accusations and tears. You will run away, but he will not come after you. While you are investigating the reason for this with your curious nature, a vicious circle will begin between you. Cut the rope of this relationship. Believe me, you will relax.";
+  }
+  else if (firstzodiac.value === "Gemini" && secondzodiac.value === "Sagittarius") {
+    result.innerHTML = "Here is a delightful and delicious relationship. You will keep an incredible tempo with your opposite sign Sagittarius and you will not let this dance break. It is so difficult to deal with two brain-cubes screaming for freedom. When you're rarely jealous of each other, that relationship can hurt, but it doesn't take long to heal. You pick up the same energy where you left off. The philosophical approaches of Sagittarius will envelop and convince you in an instant. In this togetherness, where everything is incredibly special, you have nothing to do but avoid the evil eyes. We hope this love will never break.";
+  }
+  else if (firstzodiac.value === "Gemini" && secondzodiac.value === "Capricorn") {
+    result.innerHTML = "The Capricorn person will push you a lot. He is a conservative person. Its traditional nature may go against your innovative side. As a Gemini, you like to live life day to day. You love smart and intellectual people, you love humorous people. Capricorn, on the other hand, presents the opposite of all these. But your superior aspects attract his attention and he plans to be close to you. It is very difficult for you to tolerate a Capricorn who is mysterious and secretive. Moreover, he has no time to spare for someone who will resent you for your rejection. If you really like him and you want your relationship to last despite everything, it means you have free time to devote to this relationship.";
+  }
+
+
+
+  else if (firstzodiac.value === "Cancer" && secondzodiac.value === "Aquarius") {
+    result.innerHTML = "Getting along with an Aquarius is something extremely difficult and impossible. Aquarius people have a completely different atmosphere. He is happy with different and interesting friends. It cannot be limited and limited. He is emotional, but does not fall on you and does not worry about what you think. He cannot tolerate you saying hurtful and sarcastic words. If you bore him and constantly argue, he will not miss any opportunity to get away from you, He will not get on your phones and will avoid getting together by constantly running away with excuses. If you want to keep such a person in your hands, you must be smart and know about the subjects he is interested in. Remember, the only way to get together is through intelligence. If you want, it will be a successful relationship.";
+  }
+  else if (firstzodiac.value === "Cancer" && secondzodiac.value === "Pisces") {
+    result.innerHTML = "Here's a matching pair. What can two emotional, sensitive and touchy people do when they come together?... They will make each other happy with their emotional and passionate conversations and will sweep each other off their feet. Pisces is a non-material person and puts all the responsibility on you in this regard. It does not interfere with anything you do and even supports you in every way. Her sensitive and sensitive nature is susceptible to breakage, but since you are already attentive and sensitive to her, this union is not easily injured. You can even be sure that you will be a couple that everyone will watch with envy for many years.";
+  }
+  else if (firstzodiac.value === "Cancer" && secondzodiac.value === "Aries") {
+    result.innerHTML = "At the beginning, you will like the Aries person, who will embrace you with his fiery and exciting words, with everything. And Aries is just as fiery and emotional as you are. However, you should not give up control by being deceived by this situation. Because his view of life is much higher than yours. At first, the Aries person will be jealous of you and try to limit everything. Indeed, he is telling the truth at the moment. You can be sure of your feelings. But then he will move away from you and make up all kinds of excuses. He doesn't want to hurt you, but he questions his love because of the lack of feelings. Thinking that his energetic nature will not suit your stagnant state, he has decided to end this relationship within himself.";
+  }
+  else if (firstzodiac.value === "Cancer" && secondzodiac.value === "Taurus") {
+    result.innerHTML = "We can say that the Taurus person is exactly the person you are looking for. His heart is full of love like you. He also wants a nice house and a family he wants. He is fond of children. He expects financial security in life. But a Taurus is not as romantic as you. It may not say the nice words you expect. His interest is based on more concrete things and he is incapable of saying nice words. You can be stubborn and insistent on what you want to hear. Then some undesirable arguments will arise between you. You can love the bull as much as you want, but it should never hear from you what it needs to do, its reaction may hurt you. But this togetherness is one of the long-term and life-long relationships.";
+  }
+  else if (firstzodiac.value === "Cancer" && secondzodiac.value === "Gemini") {
+    result.innerHTML = "As two representatives of this zodiac sign, you are sure to find each other attractive at first. Gemini is a person who draws attention with his beautiful speech. He will present you the beautiful sentences you expect and will blow your mind with his logical speeches. He will like you and want to be with you. But as a Cancer, you show your persistent nature in love and you get offended quickly. However, Gemini is a kind and gentle person. His only crime is that their speech is rational and logical. He may not be able to make the comments you expect and want. Moreover, it has a structure that consumes love very quickly. If he feels that the interesting things he wants are over with you, he will want to walk away. It is almost impossible to turn it back with tears and emotional talk.";
+  }
+  else if (firstzodiac.value === "Cancer" && secondzodiac.value === "Cancer") {
+    result.innerHTML = "Here are two people of the same type who understand each other. Moreover, you feel drawn to each other in a way that makes you say that this must be love at first sight. Love, home, financial security is abundant in both of you. This relationship leads to a completely happy conclusion. Knowing that a lifetime of love awaits you is reassuring for both of you. However, having the same features on both sides indicates that the negative aspects will be the same. In your stubborn and pessimistic days, you should show understanding to each other and avoid mutual arguments. In every sense, it will be a long-lasting and fairy-tale-worthy union. As a parent who loves children, you will set an example.";
+  }
+  else if (firstzodiac.value === "Cancer" && secondzodiac.value === "Leo") {
+    result.innerHTML = "You can attract the Leo person's attention at first sight. Because he is someone who likes attention and love, and you have this feature too. The Leo person will be very attractive to you at first glance. But then your overly emotional side will come out, and it will be difficult to live with a Leo who does not like to be limited. He does not like to be held to account and always has circles of friends he likes to be with. If, after all, you are in love with a Leo, a relationship will turn out to be worth it all. Because the Leo, who is a quality person, will always value you and treat you with respect. Such a beautiful relationship will be worth everything. You should both stay away from the feeling of stubbornness.";
+  }
+  else if (firstzodiac.value === "Cancer" && secondzodiac.value === "Virgo") {
+    result.innerHTML = "Getting along with a Virgo person will require a lot of effort. He is not as sensitive and romantic as you. He does not hesitate to express his thoughts openly. He doesn't even think about hurting you. He is also a person who likes to talk more than listen. He constantly speaks his thoughts and his life is built on details. His feelings are not as deep as yours. As he does not like loneliness, he always wants to be a friend around him. It is not possible to have emotional conversations with him alone. You will definitely find a way to get along with this special person who does not like loneliness but is meticulous about quality and tastes. If you can manage to show mutual respect to each other, you can maintain a lifelong relationship.";
+  }
+  else if (firstzodiac.value === "Cancer" && secondzodiac.value === "Libra") {
+    result.innerHTML = "You may like the Libra man at first sight. He is a kind, charming, elegant, pleasant, attractive and affectionate type. Although a Libra can be emotional and romantic, they will never do anything unreasonable. At all times, the auto control system shows its strength. He cares about home like you. But he cannot imagine a life without a social life. Although he values ​​love, he will meet with his friendships and their togetherness will continue. He will spend at least as much time with them as he does for you. Libras enjoy respectful partnerships. They hate rudeness. They have a touchy nature at least as much as you. You have a lot to deal with at the same point. Over the years, your shares will increase and you will become a part of each other.";
+  }
+  else if (firstzodiac.value === "Cancer" && secondzodiac.value === "Scorpio") {
+    result.innerHTML = "Here is one of the perfect couples of the Zodiac. What would happen if two emotional, sensitive, hot, jealous, skeptical people came together.. It is a union with a different line, reminiscent of a calm sea after stormy weather. Scorpio values ​​matter and will appreciate you for being frugal like him. Because you care about saving together, you will spend your old age years in safety. However, Scorpio's skeptical and possessive nature can show itself in any subject. Due to your stubborn and touchy sides, your togetherness will experience frictions over time. His intense feelings will always keep your relationship alive. Over time, you will overcome many things together and mature. This love will be worth everything and will forgive your anger.";
+  }
+  else if (firstzodiac.value === "Cancer" && secondzodiac.value === "Sagittarius") {
+    result.innerHTML = "You may like a Sagittarius man. Its libertarian and maverick structure will attract your attention. He or she has features that you may never want to be and never dare. He is marginal, whimsical, clever, practical, and most importantly, he has a different color than everyone else. He doesn't have much to match with you. Even his emotionality is extraordinary. He may be indifferent to the depths you experience in your feelings. With his day-to-day personality, he becomes a very good friend of yours. If you stubbornly intend to continue this relationship, one day he will want to get out of your life. He will not let you know when he is leaving and will prefer silence, as he will not tolerate your tears. You will never forget him for the rest of your life, and you will remember him with a little anger and a little laughter.";
+  }
+  else if (firstzodiac.value === "Cancer" && secondzodiac.value === "Capricorn") {
+    result.innerHTML = "Capricorn is your opposite sign. You both have each other's other half. He is stubborn and suspicious like you. He will hide everything he thinks about you and will constantly want to test you. He is not as emotional as you. But he senses the storms in your soul. Sometimes his words can be cruel and critical. Because he has an inner distrust of everything. He likes habits and may react to your habits. Your patient and loving aspects will convince him. Once you get to know each other, it will be a perfect togetherness. In time, you will become his friend, his lover, his everything. This is a relationship that will never end.";
+  }
+
+
+
+  else if (firstzodiac.value === "Leo" && secondzodiac.value === "Aquarius") {
+    result.innerHTML = "Aquarius is the opposite type of Leo. They attract each other in every way. The lion will be very fond of a person who is similar to himself but who is different. As soon as he sees him, he will be affected by his personality, they will form many common denominators among them, and they will share the same tastes. This couple, who managed to fascinate each other, will last a lifetime, provided that their cultural levels are equal. Gifted Aquarius, with their quirky and marginal style, will project their self-image into their relationships. They will share a respectful relationship with Leo because they tell the other person in plain language that they do not like to be envied too much. We can say that it is impossible to say anything negative about this relationship, where even small arguments are easily avoided.";
+  }
+  else if (firstzodiac.value === "Leo" && secondzodiac.value === "Pisces") {
+    result.innerHTML = "You may initially like the romantic and sensual Pisces person. He will approach with calm and moderate behavior and will list his requests without offending you. But he does not have a personality as strong as you. He will be offended, upset, and even resentful at your smallest arguments. His false dreams will also disturb you. Because for you, life will be difficult with a Pisces who stays behind, misunderstands what you are doing and shows resentment, while everything is progressing concretely. His sadness can trigger your feelings of compassion. But one day this relationship will end sooner or later. You can spend all your good intentions on this relationship. You only delay the expected separation.";
+  }
+  else if (firstzodiac.value === "Leo" && secondzodiac.value === "Aries") {
+    result.innerHTML = "Here is a relationship fit for kings. As soon as Aries sees you, they will stay engaged. He is faced with a special person whom he has found something of himself. He will be impressed by your charismatic personality, fall on you and pamper you. Because he has dreamed of someone like you all his life. You have a lot in common. As long as you don't try to manage each other, there will be no problems. Aries has an extremely free nature and always lives by their own truths. If you can manage to respect his personality, everything will be perfect. Aries is jealous and it's impossible not to be jealous of a Leo. We do not know how you will overcome these feelings, even when nature supports you. You are with the right person and neither of you has the right to sacrifice this relationship. Do not forget.";
+  }
+  else if (firstzodiac.value === "Leo" && secondzodiac.value === "Taurus") {
+    result.innerHTML = "Two fixed personalities and two people who are stubborn and uncompromising in their personality. You need to question very well what you expect from this relationship. Is it love you are looking for? . Friendship?.. If you want, both will be perfect. You both like to be stubborn. Compromise is not your style. But the sexual attraction between you is strong enough to melt all resentments and arguments. The moment you touch each other, you forget everything and fall into each other's arms. Who can give up a love table where the forbidden apple is presented so beautifully? I don't know what else can be said for a relationship that enjoys the days when you don't fight, with the hottest nights of love. Emotion, romance, jealousy, and a lifetime of love await you. Say what ? We think it's all worth it...";
+  }
+  else if (firstzodiac.value === "Leo" && secondzodiac.value === "Gemini") {
+    result.innerHTML = "There is no doubt that you will like the Gemini person as soon as you see them. Gemini will also fall in love the moment they see you. Well, highly qualified people like you don't always come across people. Bringing the beauties of life to his feet with your wand in your hand will blow the minds of the Gemini. Moreover, he is no different from you. A Gemini loves their mind. He is selfish and egotistical. Even if he loves you, he does not leave the race to you and fights for supremacy in every field. While doing all this, she is so cute and charming. Instead of being angry with him, you feel more connected. For a Leo, Gemini will become an indispensable passion. As Gemini matures over time, they will enjoy your togetherness differently. This relationship will last a lifetime.";
+  }
+  else if (firstzodiac.value === "Leo" && secondzodiac.value === "Cancer") {
+    result.innerHTML = "As soon as a Cancer sees you, they will immediately fall in love. Your superior qualities will not make it difficult for you to attach it to yourself. But something will always go wrong in this relationship. You may like the Cancer's devotion to you, but then your relationship will start to stumble and you will start to think about your mistakes. Cancer will never admit guilt in this matter. He will try to persuade you sweetly, and he will insist. You have to let it be a long relationship. Because in Cancer you will find the kindness and warmth you seek. He will be loyal to you for life and will endure any sacrifice to protect his home. You too must learn to turn a blind eye to his jealousy. The older your relationship gets, the better everything will be.";
+  }
+  else if (firstzodiac.value === "Leo" && secondzodiac.value === "Leo") {
+    result.innerHTML = "If two Leos get together, there's no reason why things can't be perfect. The two fires will burn much better together. Their bright light will illuminate their surroundings, and many friends and associates will follow them with envy. But everything will not be as rosy as it seems from the outside. Due to the negative characteristics of both, the possibility of great wars should never be forgotten. It will be a relationship where jealousies and egos collide, but because they cannot find the same flame in other places, they will throw themselves in each other's arms after every fight, and they will fight again in their best moments. To some, this relationship may sound like an interesting movie. however, it will have to be protected within itself. It would be a real shame if this beautiful tie ends.";
+  }
+  else if (firstzodiac.value === "Leo" && secondzodiac.value === "Virgo") {
+    result.innerHTML = "You can't get along easily with a Virgo person. His critical aspects will bother you. Also, he is not passionate and hot-tempered like you. He can be stingy when it comes to spending money. Because you don't value the item, his behavior will look different. This togetherness will disappoint you and even anger you. Be as well-intentioned as you want, it is very difficult to show him certain things. Since Virgo will not believe anyone but their own truth, you will be in a constant argument. Even though you try to maintain this togetherness with all your good intentions, it is a relationship that is destined to fade over time. It's best to forget about it without wasting any more time. I'm sure you'll be better at being friends.";
+  }
+  else if (firstzodiac.value === "Leo" && secondzodiac.value === "Libra") {
+    result.innerHTML = "Here is an extraordinary and suitable love that you can agree with or even maintain for a lifetime. You have so many things in common. Indulging in luxury, striving for a comfortable and quality life, spending time with friends, are available to both of you. Libra will be influenced by your bravery, right sides, and strong personality and will be in an effort to make you love himself. But while doing all these, he will never leave his kindness and gentleness, and he will never be persistent. A quality and level relationship will begin between you, and you will find real happiness in each other. As long as you don't raise your voice, Libra will never leave you, they will accompany your love for life. This togetherness will literally last all fours.";
+  }
+  else if (firstzodiac.value === "Leo" && secondzodiac.value === "Scorpio") {
+    result.innerHTML = "The meeting of a Scorpio and a Leo is extremely interesting. We can interpret the encounter of two strong personalities as two fighters entering the arena. Both weigh each other to avoid mistakes. Leo is proud and generous. Scorpio, on the other hand, is suspicious and intelligent. But in the face of Aslan's superiority, he hides his own weapons and goes to deal with it. Because they are both passionate and hot. Scorpio, thinking that such a relationship cannot always be lived, prefers to share it instead of fighting it. Everything about these two superior people is different. It is truly a love worth living. In this special relationship, which is not given to everyone, everything will develop extraordinary. Even though jealousy lurks, they will live this love doomed.";
+  }
+  else if (firstzodiac.value === "Leo" && secondzodiac.value === "Sagittarius") {
+    result.innerHTML = "Sagittarius fearlessly approaches you. Because he has no small calculations with life. He is a warrior who challenges you, who has established your superiority throughout his life. Nice deleted their relationship with a pen without blinking an eye. Meeting such an extraordinary person can make you stunned. As soon as you regain yourself, you may want to attack it in order to fight for supremacy. But do not think that he will take it. Moreover, he will stare at you with his bright eyes and say all the words that will hurt you in one fell swoop. Its charm affects you so much that you start chasing it as it runs away. We don't even want to think about the end. With the Fiery Bow, you can experience a great love by risking injury.";
+  }
+  else if (firstzodiac.value === "Leo" && secondzodiac.value === "Capricorn") {
+    result.innerHTML = "Aquarius is the opposite type of Leo. They attract each other in every way. The lion will be very fond of a person who is similar to himself but who is different. As soon as he sees him, he will be affected by his personality, they will form many common denominators among them, and they will share the same tastes. This couple, who managed to fascinate each other, will last a lifetime, provided that their cultural levels are equal. Gifted Aquarius, with their quirky and marginal style, will project their self-image into their relationships. They will share a respectful relationship with Leo because they tell the other person in plain language that they do not like to be envied too much. We can say that it is impossible to say anything negative about this relationship, where even small arguments are easily avoided.";
+  }
+
+
+
+  else if (firstzodiac.value === "Virgo" && secondzodiac.value === "Aquarius") {
+    result.innerHTML = "The Aquarius is smart and intelligent. It gives importance to information. Everything that this person with high ideals values ​​will be of interest to you. It looks modern. It actually depends on the conservative and habits. You will see these features of him and you will think more positive things about your togetherness. . This union, which is based on rationality rather than emotionality, will last a lifetime if everyone knows their duties very well. Aquarius will teach you to use your critical aspects more carefully. You have to protect your relationship.";
+  }
+  else if (firstzodiac.value === "Virgo" && secondzodiac.value === "Pisces") {
+    result.innerHTML = "It is extremely difficult to get along with a sensitive, sensitive, touchy Pisces. He looks at life only with his feelings. He cannot understand your rational approaches. Thanks to his willingness to learn, you can share something different, and if you have the same level of mind, you can teach him a lot. You will both learn to share together in time. But there will always be a lack of electricity in this relationship. The feeling of friendship you have is also present in him. As the years pass, there will be something diminishing in your togetherness.";
+  }
+  else if (firstzodiac.value === "Virgo" && secondzodiac.value === "Aries") {
+    result.innerHTML = "You get along well with the Aries person in the beginning. Aries will be curious, interested, and down on you. But he is an incurable adventurer. His enthusiastic, patient and innovative nature will attract your attention at the first moment. Moreover, it is impossible to say no to an attractive Aries. You're as hot as he is, not even if you wanted to. Your critical aspects will be quite mild in the face of an Aries. He's a much more hurtful talker. It is absolutely impossible for him to return to you as soon as he moves away from you. Remember that this love will go where it is and it will definitely end one day.";
+  }
+  else if (firstzodiac.value === "Virgo" && secondzodiac.value === "Taurus") {
+    result.innerHTML = "Here are two people who understand each other together. You both care about matter. Lone Taurus is a person of passion and deep feelings. He is not easily satisfied and wants the best of everything. You like criticism and use your tongue sharply. But it is not easy for you to injure a Taurus. With its calm and stubborn nature, it can crush you silently. No matter what you do in front of him, you will not be effective. If you don't think about changing it and trust it. You will gain friends and lovers who will be with you for life. It is one of the true relationships of astrology.";
+  }
+  else if (firstzodiac.value === "Virgo" && secondzodiac.value === "Gemini") {
+    result.innerHTML = "You obviously share the same electricity as the twins. He is also smart and intelligent like you. He will like you the first time he sees you and will look for ways to get you. Moreover, a Gemini is more cunning than a Virgo. He knows how to connect the other person to himself. It will not be difficult for him to take you into the palm of his hand with his witty intelligence. All kinds of conditions may be suitable for the continuation of this relationship. But you cannot easily tolerate a person smarter than yourself. This relationship will end one day. While the road is near, you must manage to remain friends.";
+  }
+  else if (firstzodiac.value === "Virgo" && secondzodiac.value === "Cancer") {
+    result.innerHTML = "You get a good frequency with the crab. But always remember that there may be differences between you. While you are acting with your logic, Cancer will always listen to the voice of their emotions. It can be difficult to get along with a person who is constantly changing. However, Cancer will perceive your addiction to substance very well and will help you save money. Your detailing will be pleasing to him and you will find a good frequency together. As long as you don't fuel the jealousy of the crab, everything will go perfectly.";
+  }
+  else if (firstzodiac.value === "Virgo" && secondzodiac.value === "Leo") {
+    result.innerHTML = "You know that living with a Leo is not easy. Because he thinks the world revolves around him, he is a generous sharer but a little bit cocky. Love is not rational. You cannot deny their jealous and selfish aspects. As a Virgo, you can't help but criticize the other person. Also, Leo's fondness for showing off can drive you crazy. When you balance your relationship, the loss is so high that you both have to part ways before you come to the brink of emotional bankruptcy. Everything should stay on the border of innocent flirting.";
+  }
+  else if (firstzodiac.value === "Virgo" && secondzodiac.value === "Virgo") {
+    result.innerHTML = "A logical relationship with many common features. You both care about substance, enjoy being together with your friends and love to chat for hours. Details are very important to the two of you and you like to plan together. Moreover, you both aim for a quality life. Even though everything is going well up to here, you can make your relationship negative because of your mutually critical attitudes. Neither of you has the right to destroy astrology's most private partnership. This relationship will only get better as the years go by.";
+  }
+  else if (firstzodiac.value === "Virgo" && secondzodiac.value === "Libra") {
+    result.innerHTML = "It is not possible for everyone to be together with such a person. Libra loves money as much as you do, but they desire to have it in order to live and spend it well, rather than saving it. You can't criticize Libra. If you make such a mistake, he will be offended, resentful and immediately walk away from you. Yet it has the most outstanding feature you will ever come across. No matter what, you have to protect this togetherness.";
+  }
+  else if (firstzodiac.value === "Virgo" && secondzodiac.value === "Scorpio") {
+    result.innerHTML = "It fits very well with the skeptical, intelligent and intuitive side of Scorpio, your rational, logical, friendship-loving nature. You both are refreshed and invigorated in each other. It's a relationship you've wanted for a long time, and you'll make every sacrifice to maintain this togetherness. Scorpio adopts and owns what he loves. Virgo values habits. Scorpio's love creates addiction in him and an indispensable union begins between them. Even if they have their own problems, their love will be strong for a lifetime.";
+  }
+  else if (firstzodiac.value === "Virgo" && secondzodiac.value === "Sagittarius") {
+    result.innerHTML = "The Sagittarius person is versatile. He acts with logic rather than emotions. He has an ambitious and idealistic nature. He is not under the influence of anyone and likes to live individually. In the beginning, your clever and rational approaches will be interesting to him. Then your sparkles will fade and he will not want to show much interest in this naked relationship and will speak his thoughts without fear. You may be fascinated by his honesty. But remember, it is not easy to get along with a Sagittarius and if you insist on being together he will constantly upset you.";
+  }
+  else if (firstzodiac.value === "Virgo" && secondzodiac.value === "Capricorn") {
+    result.innerHTML = "Here is a person who is ready to agree with you on everything. All your tastes are common. Capricorn is smart, suspicious, logical and trusting. Gives importance to details. He will not forget the details about you and will fascinate you with his gestures. You can always find anything you want in a Capricorn. He feels the material and future anxiety just like you and constantly tries to expand his living conditions. His introverted demeanor opens up to the outside world thanks to you. He feels different and happy with you. No one can break this bond.";
+  }
+
+
+
+
+  else if (firstzodiac.value === "Libra" && secondzodiac.value === "Aquarius") {
+    result.innerHTML = "One of the people you can get along with best is standing in front of you. Aquarius can have a shocking effect on you with their free attitude. You can hit the frequency you want with it and fly. In a way, it will be an honor for you to be chosen by this person who is smart and acts differently from others, when there are many volunteers to be with. At first, you'll have to put in a lot of effort to get her attention. The day you discover his conservatism under his comfortable appearance, your togetherness will literally fall into place. A beautiful and harmonious togetherness.";
+  }
+  else if (firstzodiac.value === "Libra" && secondzodiac.value === "Pisces") {
+    result.innerHTML = "You may like the type of fish. A deep love may also arise between you. But living with an irrational and illogical Pisces like you is not easy. His ever-changing emotions, jealousy and colorful inner world will definitely come to you virtual. Since you do not look at life as fatalistic and dreamy as he is, you are very likely to get tired of this relationship. Even if you are in love with Pisces, living together is very difficult and sooner or later separation will knock on your door.";
+  }
+  else if (firstzodiac.value === "Libra" && secondzodiac.value === "Aries") {
+    result.innerHTML = "Your opposite sign, Aries, is excited, cheerful, active and passionate. You can easily attract their attention. Mars and Venus collision is a reflective relationship. Most Aries are frivolous. You are a balanced and intelligent person. If you manage to make yourself loved and become indispensable to Aries, your relationship will last a lifetime. Moreover, Libras are born for love. Your coach will ignite your fiery feelings. Connecting an Aries to Libra will not be difficult, and both will surrender voluntarily to the relationship.";
+  }
+  else if (firstzodiac.value === "Libra" && secondzodiac.value === "Taurus") {
+    result.innerHTML = "As a Venus person, it is impossible for you both not to be influenced by each other. Taurus will find everything he wants in beautiful, expressive and attractive Libra. Both are ready for marriage. Libra does not like to live alone in life, since life is always based on unity. Taurus is already born for the nest and children. He is always looking for a warm family. The only thing that spoils their relationship is the jealousy of the Taurus, the excessive whims of the Libra. It is one of the true relationships of astrology. If you take care of your relationship, it will last a lifetime.";
+  }
+  else if (firstzodiac.value === "Libra" && secondzodiac.value === "Gemini") {
+    result.innerHTML = "Versatile, intelligent, witty, knowledgeable and cultured Gemini will be attracted to you at first and you will fall in love with them. There is much in common between us. Clever Gemini will instantly understand your every feeling. But it is imperative that you respond to his expectations. Because you have to keep him busy and talk to him about everything. If you want to marry a Gemini, you have to find interesting topics that will interest him for life and show him your lifelong interest. We can call this love a long-lasting relationship.";
+  }
+  else if (firstzodiac.value === "Libra" && secondzodiac.value === "Cancer") {
+    result.innerHTML = "Cancer is romantic and emotional. He values love too much. You will probably be impressed by his kind and gentle behavior, he will want to get married right away, and you will feel drawn towards the emotional world of Cancer. Everything will be fine in the beginning and you will think that the person in your life is him. Cancer is not as social as you and may not be very open to the environment outside of family relationships. While you want to travel and have fun, he may prefer to stay at home. If you can balance between you, we can give this relationship a chance.";
+  }
+  else if (firstzodiac.value === "Libra" && secondzodiac.value === "Leo") {
+    result.innerHTML = "Here is one of the most beautiful togetherness stands before you. Leo is generous, funny, sharing and loving. Everything you are looking for is more than enough in it. He will be impressed by your grace, charm and effective speech. He'll be secretly proud, while envious of your lurking fans. You will be an incomparable wife and lover for Honorable Aslan. If you are confident in yourself, you can start this relationship right away. Believe me, you won't regret it. A harmonious life and a beautiful togetherness await you.";
+  }
+  else if (firstzodiac.value === "Libra" && secondzodiac.value === "Virgo") {
+    result.innerHTML = "The Virgo type is never a relationship for you. You can agree with him about money and social life. He is just as fond of friendships as you are. He wants to have friends around him. They will have long conversations with them. But understanding you as a Libra is not easy. For a Virgo who is more concerned with logic than emotions, you will be overly sensitive. However, you are just as rational and sensitive as Virgo. You may get tired of explaining yourself to each other, and since you don't want to waste any more effort, you say goodbye to this relationship.";
+  }
+  else if (firstzodiac.value === "Libra" && secondzodiac.value === "Libra") {
+    result.innerHTML = "That's the perfect relationship. It is like a noble, noble, balanced and gripping novel. You can feed your emotionality with each other. Since you will have so much in common, the issues between you will not end for days. You both desire a peaceful and comfortable life. You nurture trust and respect for each other. Be prepared for the fights between you that you cannot avoid, as you will both be reactive in the face of injustice. An ideal relationship after all.";
+  }
+  else if (firstzodiac.value === "Libra" && secondzodiac.value === "Scorpio") {
+    result.innerHTML = "Scorpio people have deep feelings. Love, romance and sexuality are an indispensable part of life for him. It's not always easy to get along with this person who is also terribly jealous. He will love you, own you and will not want to share. If you gain her trust, she will offer you a love that you will never find again in a lifetime. If you can bear the restriction of your movements, he will do his best to make you happy and will not share you with anyone.";
+  }
+  else if (firstzodiac.value === "Libra" && secondzodiac.value === "Sagittarius") {
+    result.innerHTML = "You may like Sagittarius in the beginning. Living with this double-character person will entertain you a lot. A cheerful, attractive, innovative Sagittarius will open the door to a world you have never seen before. But living in a Highland is not always easy. A Sagittarius who gets bored quickly and can't afford to be restrained will cool off very quickly. You should try to be friends with him first. If you really manage to care and respect each other, you should try this relationship.";
+  }
+  else if (firstzodiac.value === "Libra" && secondzodiac.value === "Capricorn") {
+    result.innerHTML = "The Capricorn man has a really high quality and undemanding structure. Their views are very different from yours. There is a great balance between matter and emotions. Your togetherness will be like no other. Picky and possessing quality tastes, Capricorn does not exalt and exaggerate you. He may admire it, but will not like to indulge. Next to him, your feet will be firmly on the ground and you will look at life more realistically. For a Libra that wants constant attention, it's a surprising and fun relationship. This togetherness will be different and distinguished in every sense.";
+  }
+
+
+
+
+
+  else if (firstzodiac.value === "Scorpio" && secondzodiac.value === "Aquarius") {
+    result.innerHTML = "It is very difficult to come to terms with this person who has such a strong sense of independence. Aquarius is a person who, despite being smart and intelligent, does not compromise on his own knowledge. His love lives marginally and does not like to be held accountable to anyone. Since he likes to spend money freely, he will immediately react to your frugal behavior. Also, his jealousy will make you bored, and this relationship will never last a lifetime, as you can't prevent fights you don't want from arising.";
+  }
+  else if (firstzodiac.value === "Scorpio" && secondzodiac.value === "Pisces") {
+    result.innerHTML = "Your union with a Pisces will be long-lasting. With its emotional, sensitive and subtle nature, Scorpio's intense love creates a beautiful karma. Scorpio is thrifty, Pisces is extravagant. They both look at money with a different value. However, for a long-term relationship, they have many features in common. For a Pisces who constantly needs a sense of security, you have all the necessary data to make your life easier. The positive aspects of this togetherness will surround both of you. You have many reasons to be together.";
+  }
+  else if (firstzodiac.value === "Scorpio" && secondzodiac.value === "Aries") {
+    result.innerHTML = "You have many characteristics similar to an Aries. While pulling each other, you can suddenly push. We can say that a contradictory and contentious relationship is risky. Aries doesn't hold back, and their eyes don't see anything when they're angry. He is sincere and sincere in his feelings. It may react to your mysterious and enigmatic behavior. There is not much you can project onto each other other than sexual attraction. Moreover, you both tend to lead rather than be led. In this case, it's just saying goodbye to each other before bigger wars break out between you. You can become friends later.";
+  }
+  else if (firstzodiac.value === "Scorpio" && secondzodiac.value === "Taurus") {
+    result.innerHTML = "An incredibly intense relationship awaits you. Taurus is passionate and fiery like you. Your feelings will be reciprocated as you wish. When Taurus loves, they are literally hooked. They are jealous and possessive. The only problem between you is in your social relations with others. You both have the same characteristics. When a bull is angry, no one can stop him. Scorpio has calm and provocative traits. Moreover, he is more jealous than Taurus. This relationship will always be a special one where extraordinary emotions dance. It's an interesting relationship.";
+  }
+  else if (firstzodiac.value === "Scorpio" && secondzodiac.value === "Gemini") {
+    result.innerHTML = "There's no reason why you shouldn't like the Interesting Twins. Their cute and cunning minds seduce even the devil. You like smart and interesting people. Your attachment to your habits is absent in a Gemini. It is always in motion and changeable. Even if its attractive and bright aspects impress you, it will frustrate you later. You can blame yourself for falling for it. Thanks to your analytical and researcher side, you will not have difficulty seeing its negative aspects. The fate of this love will be in your hands, even if it cunningly approaches you.";
+  }
+  else if (firstzodiac.value === "Scorpio" && secondzodiac.value === "Cancer") {
+    result.innerHTML = "Here is a relationship you can fit in. You will be impressed by his romantic and emotional approaches. There is a jealous, sensitive and intuitive person standing in front of you and he extends his hand to you and invites you to love. It's definitely a relationship that will last a lifetime if you don't constantly monitor each other and can curb your jealousy. There will be no sexual problems between you and this love, which is hot and full of everything necessary for togetherness, will be watched with envy.";
+  }
+  else if (firstzodiac.value === "Scorpio" && secondzodiac.value === "Leo") {
+    result.innerHTML = "This relationship will be very special as you will be influenced by each other. Leo does not like to lose. As soon as he sees you, he will approach you, making sure that you will be the one he chooses. You both have superior talents. Everyone convinced himself that he was different and interesting. You do not like to lose. It will not be easy to capture a proud and noble Lion. A relationship worthy of royalty awaits you. If you want to enjoy it, close your ears to the negative opinions of those around you and listen to your inner voice.";
+  }
+  else if (firstzodiac.value === "Scorpio" && secondzodiac.value === "Virgo") {
+    result.innerHTML = "It will not be difficult for you to get along with a cheerful and friendly Virgo. Inwardly, you will feel drawn to him as his clever and powerful logic surprises you. He acts in a planned and programmed manner. Makes sensible decisions for you. You can even install all the organization you want to make your life easier. Virgo does not want you to interfere in their work while doing all these. You can surrender yourself to him. He will direct your life with his careful and disciplined attitude. This relationship is traditional and special.";
+  }
+  else if (firstzodiac.value === "Scorpio" && secondzodiac.value === "Libra") {
+    result.innerHTML = "Here is a different relationship with everything. Libra is a total love person. You will be immediately impressed by its elegance and attractiveness. It has a different style. Even while displaying his sexuality, he makes subtle use of seductive love games. Libra loves money just as much as you do. You can enjoy life with it, and you can build a life with it. Who can say no to a Libra who respects you and your relationship. Are you ready to be one of the most compatible couples supported by astrology?";
+  }
+  else if (firstzodiac.value === "Scorpio" && secondzodiac.value === "Scorpio") {
+    result.innerHTML = "While searching for the person of your life, you may not even want to think about saying no to this person who looks like you. How can you be indifferent to a Scorpio, who is just like you with their passionate and fiery sides... You are a couple who will experience love in the best way. You just have to take care of mutual respect throughout your life.";
+  }
+  else if (firstzodiac.value === "Scorpio" && secondzodiac.value === "Sagittarius") {
+    result.innerHTML = "A relationship that will confuse Scorpio. With an extraordinary person who never looks like him, he can't decide what to do. With his attractive and free attitude, he will turn your head and make you forget all the rules you know. Besides, you will erase all your old life from your mind. It is intelligent and practical. You don't even need to tell him what's on your mind. But he is not as overly emotional as you. He doesn't make any promises to you for words he doesn't feel. One day he will break you and want to walk away. Forget about it.";
+  }
+  else if (firstzodiac.value === "Scorpio" && secondzodiac.value === "Capricorn") {
+    result.innerHTML = "The moment you see each other, you will fall in love. You will not believe that you are living in the arms of a love you have always dreamed of, as Capricorn approaches you with a longing for elite and extraordinary relationships. You can compete with each other on logic and rationality. But as soon as emotions come into play, everything will be different. Making him feel your warmth is a little difficult. You will need a lot of time to express your passionate sides. A love with a different line.";
+  }
+
+
+
+
+
+  else if (firstzodiac.value === "Sagittarius" && secondzodiac.value === "Aquarius") {
+    result.innerHTML = "You are two inseparable fireballs of an active and energetic life. It's rare to find two people who complement each other so well. Pleasures and feelings are the same. They bond even more with their witty approach to events. Sagittarius' cheerful demeanor suddenly clashes with Aquarius' marginality. They are so sure that they have met the person who will understand them as soon as they see each other, that they lay the foundation of a lifelong togetherness. Even untimely fights between them will never end this love.";
+  }
+
+  else if (firstzodiac.value === "Sagittarius" && secondzodiac.value === "Pisces") {
+    result.innerHTML = "It is impossible to think of the freedom defender Sagittarius and Pisces together. Since this love will always be on its own thorns, it will turn into a vicious circle over time. Sagittarius can't get used to a Pisces' unnecessary, touchy and emotional behavior. Moreover, he is not someone who has as much inner dreams as he does. The more introverted Pisces is, the more at peace with Sagittarius. All in all it is a negative combination. If Pisces persists, Sagittarius will definitely find a way to get away from him.";
+  }
+
+  else if (firstzodiac.value === "Sagittarius" && secondzodiac.value === "Aries") {
+    result.innerHTML = "A very fun relation. The fact that they are both open to adventure fuels the feelings of discovery and they sign an incredible life marathon. Sagittarius's self-confidence sparks Aries. Fights are short-lived and temporary. In fact, they take great pleasure in sparring. Since their hearts are on their tongues, they are also unable to keep secrets from each other. Everything will go harmoniously in this togetherness, which is worth trying and living. Both make good parents.";
+  }
+
+  else if (firstzodiac.value === "Sagittarius" && secondzodiac.value === "Taurus") {
+    result.innerHTML = "Taurus likes to dominate. Sagittarius will never allow this. If something is to be done to Sagittarius, his reason must be appealed to. Taurus will learn this over time. If they really love, they will find the best model for their relationship by 'trial and error' method. Although the words of possessive Taurus may be offensive to Sagittarius, he admires him for his logic. While Taurus lays the foundation of the relationship, Sagittarius line up the building blocks and load them together in a suitable relationship. This relation will get the desired yield in its vicious circle over time.";
+  }
+
+  else if (firstzodiac.value === "Sagittarius" && secondzodiac.value === "Gemini") {
+    result.innerHTML = "There is a harmony between them, as they both live life in the most extreme points. There is everything that is right and should be in this love. In this astonishingly versatile union, 'change' is the philosophy of life. Sagittarius is a fun and happy person in every way. Since they do not interfere with each other's freedoms, their relationship is long-lasting. Their only flaw is the danger of forgetting each other while everyone is experiencing their own intensity.";
+  }
+
+  else if (firstzodiac.value === "Sagittarius" && secondzodiac.value === "Cancer") {
+    result.innerHTML = "It's true in every way, but it's a relationship that needs time. Cancer's sacrifice is the basic principle of togetherness. While Sagittarius runs around like mischievous children, Cancer patiently waits for him. Sagittarius will always run to Cancer when he needs protection. So what are the Cancer's tolerance limits? If he loves it, it will last a lifetime. Sagittarius, on the other hand, can say 'goodbye' as soon as his love is over. If Sagittarius learns patience, their relationship can last a long time. Cancer will teach him a different lesson by showing his strength to resist.";
+  }
+
+  else if (firstzodiac.value === "Sagittarius" && secondzodiac.value === "Leo") {
+    result.innerHTML = "An energetic relation. A ball of emotions ready to explode at any moment. Although Sagittarius' impatience drives Leo mad, they share a passionate love. There are no words for their joy in their joyful days. Both of them do not miss the opportunities that come their way in order to make life enjoyable. The only negative aspect of this relationship is; The days when they are at the height of their anger are the risks of making irreparable mistakes. They must learn to restrain themselves, and enjoy their relationship.";
+  }
+
+  else if (firstzodiac.value === "Sagittarius" && secondzodiac.value === "Virgo") {
+    result.innerHTML = "A relationship with a very high IQ. Both of them use all the blessings of the mind to the fullest. They can talk and argue for hours, but they don't know how to give up. While all the details are revealed, they can reach unsuccessful results in a vicious circle. Virgo's unnecessary elaboration annoys Sagittarius. Unable to overcome his anger, Sagittarius leaves at the first opportunity, leaving him alone. Left alone, Virgo cannot grasp the meaninglessness of the situation. If they learn to share by leaving their mind wars, we can say that it is a relationship worth trying.";
+  }
+
+  else if (firstzodiac.value === "Sagittarius" && secondzodiac.value === "Libra") {
+    result.innerHTML = "It's a nice relationship. The beginning of love is not important. Just the fact that it started proves its correctness. The friendly Sagittarius instantly captivates Libra with his witty wit. Libra, famous for its balanced nature, has always dreamed of a free love. Sagittarius offers him more than enough of these possibilities. But, even when they share the most private of feelings, Sagittarius can end the relationship abruptly. Logically, they always feel ready for separations. Even if the result is negative, they will both endure their disappointment.";
+  }
+
+  else if (firstzodiac.value === "Sagittarius" && secondzodiac.value === "Scorpio") {
+    result.innerHTML = "Even at the beginning of the relationship, difficulties await them. Scorpio never hears Sagittarius' endless cries of freedom. He is blind, deaf and dumb about it. Moreover, he constantly sends arrows of intense jealousy to Sagittarius. Optimistic Sagittarius will not be offended if the emotion they share is in the higher dimensions. In fact, she will endure everything for the sake of her love. These fiery feelings need to be settled in time, otherwise they will come to the door of separation, even though they never wanted it. The war will then begin for Scorpio, who will not give up on the bow.";
+  }
+
+  else if (firstzodiac.value === "Sagittarius" && secondzodiac.value === "Sagittarius") {
+    result.innerHTML = "It is rare to come across a duo who lives life like this as an adventure. You are the best example of how sometimes speaking the same language and thinking the same things can be negative. In the wake of intense feelings of love, you have to get used to the escapes you experience in search of freedom. Although it is difficult to understand you, if you learn not to make it a problem, everything can go your way in this togetherness. Your love will mature and flourish over time. As long as you give this love the necessary time.";
+  }
+
+  else if (firstzodiac.value === "Sagittarius" && secondzodiac.value === "Capricorn") {
+    result.innerHTML = "It's the opposite of everything. Feeling surrounded by Capricorn's internal discipline and rules, Sagittarius is constantly angry at himself for starting this relationship. He is always ready to flee. Tired of Capricorn's inexhaustible logic, he makes whims at every opportunity. Even though she knows it will all end one day, she can't help herself from the awkward chaos of this relationship. While they share life in a strange way, they break up for no reason without ever hurting each other. Even after years have passed, they will remember each other with a smile.";
+  }
+
+
+
+
+
+  else if (firstzodiac.value === "Capricorn" && secondzodiac.value === "Aquarius") {
+    result.innerHTML = "The interesting philosophies and challenging natures of Aquarius are impossible for Capricorns. They try to be patient with Aquarius by pushing the limits of tolerance. Aquarius belongs to everyone and no one. There is always a feeling of 'me' in its basis. Because of this feeling, they prefer to be alone for life, even in crowds. Can Capricorns understand this feeling? Never Never! However, they still cannot manage to break away from Aquarius. Because Aquarius makes them feel the feeling of love best. It's a relationship we have to live with.";
+  }
+  else if (firstzodiac.value === "Capricorn" && secondzodiac.value === "Pisces") {
+    result.innerHTML = "Pisces' emotional nature and desire for shelter initially creates a compelling appeal to Capricorn. Pisces overcomes their insecurity thanks to Capricorn. Afraid to live life alone, Pisces tries to be strong by taking courage from Capricorn. While doing this, he gets so caught up in his role that one day he becomes a real actor. Pass the time for Capricorns. They learn about life together. They create a nice sharing among themselves in the exchange of logic and emotion. A good match for both.";
+  }
+  else if (firstzodiac.value === "Capricorn" && secondzodiac.value === "Aries") {
+    result.innerHTML = "Poor Aries! All their lives they have learned to choose. They got everything they wanted. The word defeat is distant and foreign to them. Especially when it comes to love, is it possible to enslave Aries? Aries born to explore have obviously never met a Capricorn. Here she is standing in front of someone who will teach them a life lesson and coldly looks at her. A new process begins for Aries who first think they have been defeated. The result is obvious, 'I will both cry and go...'";
+  }
+  else if (firstzodiac.value === "Capricorn" && secondzodiac.value === "Taurus") {
+    result.innerHTML = "Two logical forces are facing each other. They prefer war to peace. Everyone likes their own mind. Unfortunately, they don't know how to give up, even if they know they're on the wrong side. Halfway through, they choose love over war. Now, everyone knows each other's weaknesses. There is only one thing for them to do, to live their love with great pleasure. A long-lasting relationship. If they can get their extreme stubbornness under control, they won't have long arguments. Respect will be at the forefront in this relationship and they will experience a quality togetherness.";
+  }
+  else if (firstzodiac.value === "Capricorn" && secondzodiac.value === "Gemini") {
+    result.innerHTML = "Capricorn usually knows what he wants, sets his goals well, knows no obstacles and reaches his goal. The Gemini, who dances with life, does not give up on this dance, even if she can not get a figure with Capricorn. He is a partner he has never met in life. Even if it is difficult, Gemini is ready to try anything with him. Capricorn's idea, on the other hand, is so different that he has no intention of harboring the stormy Gemini. An untimely wind begins between them. The first to save themselves, Gemini will run away from this relationship without looking back. Their memories of Capricorn will always remain private.";
+  }
+  else if (firstzodiac.value === "Capricorn" && secondzodiac.value === "Cancer") {
+    result.innerHTML = "It is difficult to get the crab out of its shelter. He lives with his emotions rather than his logic. He is moody, whimsical, romantic and affectionate. But he can never keep up with Capricorn's logic. One of the two must accept these contradictions and surrender himself to the other. The ones who will do that too, of course, are the Cancers. Moreover, he waits patiently for Capricorn's sensuality to emerge over time. A Capricorn is always weak to Cancer. He acts with the instinct to protect her and a long-lasting relationship begins.";
+  }
+  else if (firstzodiac.value === "Capricorn" && secondzodiac.value === "Leo") {
+    result.innerHTML = "They don't know why they got together. They watch their surroundings in amazement. The only common point is that they both have an executive spirit. The lion's personality is medium with all its visuals. He does not hesitate to reveal his managerial spirit. Capricorn, on the other hand, always keeps the managerial spirit hidden behind his shy nature. They both love power, so their union takes a long time. Even if they protect this relationship as a good racer in the race for life, it is certain that the battles for supremacy will end this love in time. I wish they could make more sense.";
+  }
+  else if (firstzodiac.value === "Capricorn" && secondzodiac.value === "Virgo") {
+    result.innerHTML = "Perfect relationship. There is very little to be said incongruously. They have come to sign life together, they are always ready to carry life together. Sometimes they do not have a passion for supremacy, although they do battle of the minds. They have so much to share that a lifetime is not enough for them to do. Maybe, in the long run, the tension of the relationship may decrease. However, the communication between them is never broken. They both prefer a balanced and cold love to an ambitious life. It is a partnership that will become more meaningful as the years go by.";
+  }
+  else if (firstzodiac.value === "Capricorn" && secondzodiac.value === "Libra") {
+    result.innerHTML = "A balanced relationship with everything. It is in their hands to share life in the best way possible. The smokescreen disappears when a Capricorn staring at his surroundings with a dull eye meets the gaze of a Libra. For Capricorns who are tired of looking at life with a haze, Libra is a shining sky. It's a triumph for Libras that surround Capricorns with thousands of bubbles of smiles. Life began for them at that very moment, as Capricorn has been lovingly reaching out to Libra for years, longing for such a love. A quality relationship.";
+  }
+  else if (firstzodiac.value === "Capricorn" && secondzodiac.value === "Scorpio") {
+    result.innerHTML = "Their encounter is like a fire burning on a snowy winter day. They approach each other as if in hypnosis, but are afraid to enter each other's magnetic field. Scorpio's burning feelings instantly warm Capricorn's frozen heart. Both are confused but happy. These two opposite types, who love challenges, bring their entire life force into this relationship. Only one word remains. To be happy for life. The only negativeness they experience in their togetherness is the managerial spirit that exists in both of them. One day they will overcome that feeling and mature together.";
+  }
+  else if (firstzodiac.value === "Capricorn" && secondzodiac.value === "Sagittarius") {
+    result.innerHTML = "It's a complicated relationship, but it's fun. Sagittarius carries his social structure to his private life as well. Capricorn likes the philosophy of Sagittarius, who approaches life with optimism. Capricorn feels more comfortable and safe with him. The enthusiasm and energy in Sagittarius sweep away the pessimism in Capricorn. Their relationship is like going from the darkness of the night to the light of the morning. It is Sagittarius who provides this. But one day, Sagittarius will get bored again, as in every relationship, and will leave a tearful Capricorn behind.";
+  }
+  else if (firstzodiac.value === "Capricorn" && secondzodiac.value === "Capricorn") {
+    result.innerHTML = "In this relationship, each will understand the movements of the other. After all, they were born in the same sign. You might think it's an exaggeration, but it's definitely a successful relationship. The fact that both of them live in financial security with the anxiety of the future brings them closer to each other. Their future is always bright. Everyone is responsible for their own steps as we walk slowly and confidently together. While sharing their ideals, they do not neglect to support each other. This relationship is definitely long-lasting. They both have a lot to share.";
+  }
+
+
+ }
+
+  
+  
+  
+
+
+  </script>
+  
+  </body>
+  </html>

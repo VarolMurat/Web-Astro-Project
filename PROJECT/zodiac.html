@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASTROLOJY and HOROSCOPE</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark p-md-3">
+        <div class="container">
+          <a class="navbar-brand" href="/index.html">Web - Astro</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+  
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="mx-auto"></div>
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link text-white" href="/2022.html">2022 Astrology</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="zodiac.html">Your Zodiac</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="harmony.html">Zodiac Harmony</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="/contact.html">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+
+
+      <div class="image-2022">
+        <img class="bg-img-horoscope" style="position: absolute;" src="/images/horoscope.jpg" alt="">
+        <h3 class="h3-horoscope">What is your zodiac sign?</h3>
+    </div>
+
+
+    <div class="big-container">
+
+
+    <div class="new-container">
+      <div class="row">
+         <div class="col-sm-12 col-md-9 col-xl-6 mx-auto my-5">
+          <div class="row border">
+               <div class="col-12">
+                  <h1 class="text-center fs-4 py-3" style="color: antiquewhite;">Zodiac Query Tool</h1>
+               </div>
+               <div class="col-6">
+                  <select id="day" class="d-block mx-auto custom-select w-100 my-2">
+                     <option value="1">1</option>
+                     <option value="2">2</option>
+                     <option value="3">3</option>
+                     <option value="4" selected>4</option>
+                     <option value="5">5</option>
+                     <option value="6">6</option>
+                     <option value="7">7</option>
+                     <option value="8">8</option>
+                     <option value="9">9</option>
+                     <option value="10">10</option>
+                     <option value="11">11</option>
+                     <option value="12">12</option>
+                     <option value="13">13</option>
+                     <option value="14">14</option>
+                     <option value="15">15</option>
+                     <option value="16">16</option>
+                     <option value="17">17</option>
+                     <option value="18">18</option>
+                     <option value="19">19</option>
+                     <option value="20">20</option>
+                     <option value="21">21</option>
+                     <option value="22">22</option>
+                     <option value="23">23</option>
+                     <option value="24">24</option>
+                     <option value="25">25</option>
+                     <option value="26">26</option>
+                     <option value="27">27</option>
+                     <option value="28">28</option>
+                     <option value="29">29</option>
+                     <option value="30">30</option>
+                     <option value="31">31</option>
+                  </select>
+               </div>
+               <div class="col-6">
+                  <select id="month" class="d-block mx-auto custom-select w-100 my-2">
+                     <option value="1">January</option>
+                     <option value="2">February </option>
+                     <option value="3">March </option>
+                     <option value="4">April </option>
+                     <option value="5">May</option>
+                     <option value="6">June </option>
+                     <option value="7">July </option>
+                     <option value="8">August </option>
+                     <option value="9" selected>September </option>
+                     <option value="10">October </option>
+                     <option value="11">November </option>
+                     <option value="12">December </option>
+                  </select>
+               </div>
+               <div class="col-12 py-3">
+                  <button onclick="SearchHoroscope()" class="d-block btn btn-outline-danger w-100 mx-auto my-3">INQUIRE</button>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="result-container" id="div-result" style="display: none;">
+      <div class="row">
+         <div class="col-sm-12 col-md-9 col-xl-6 mx-auto">
+            <div class="row border">
+               <div class="col-12 py-3">
+                  <h2 class="text-center fs-4" style="color: antiquewhite;">Query Result</h2>
+               </div>
+               <div class="col-12 pb-3">
+                  <h3 class="fs-5 text-center" style="color: antiquewhite;">Your Zodiac is: <span id="result" class="text-success" style="color: rgb(7, 3, 3);">Virgo</span></h3>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+
+  </div>
+
+
+  <div class="footer-basic">
+    <p class="copyright">Murat Anıl Varol © 2022</p>
+</div>
+
+
+    <script>
+  
+      const nav = document.querySelector('nav');
+      window.addEventListener('scroll', function () {
+      if (window.pageYOffset > 500) {
+        nav.classList.add('bg-dark', 'shadow');
+      } else {
+        nav.classList.remove('bg-dark', 'shadow');
+      }
+    });
+
+
+
+    function SearchHoroscope() {
+          let day = 1 + parseInt(document.querySelector("#day").selectedIndex)
+          let month = 1 + parseInt(document.querySelector("#month").selectedIndex)
+        
+          if (month == 1) {
+            if (day <= 20) {
+              DisplayResult(0);
+              
+            }else{
+              DisplayResult(1)
+            }
+          }
+        
+          if (month == 2) {
+            if (day >=30) {
+              alert("There is no specified day in February.")
+            }else if (day <= 19) {
+              DisplayResult(1)
+            }else {
+              DisplayResult(2)
+            }
+          }
+        
+          if (month == 3) {
+            if (day <= 20) {
+              DisplayResult(2)
+            }else{
+              DisplayResult(3)
+            }
+          }
+        
+          if (month == 4) {
+            if (day ==31) {
+              alert("There is no specified day in April.")
+            }else if (day <= 20) {
+              DisplayResult(3)
+            }else {
+              DisplayResult(4)
+            }
+          }
+        
+          if (month == 5) {
+            if (day <= 21) {
+              DisplayResult(4)
+            }else{
+              DisplayResult(5)
+            }
+          }
+        
+          if (month == 6) {
+            if (day ==31) {
+              alert("There is no specified day in June.")
+            }else if (day <= 21) {
+              DisplayResult(5)
+            }else {
+              DisplayResult(6)
+            }
+          }
+        
+          if (month == 7) {
+            if (day <= 22) {
+              DisplayResult(6)
+            }else{
+              DisplayResult(7)
+            }
+          }
+        
+          if (month == 8) {
+            if (day <= 24) {
+              DisplayResult(7)
+            }else{
+              DisplayResult(8)
+            }
+          }
+        
+          if (month == 9) {
+            if (day ==31) {
+              alert("There is no specified day in September.")
+            }else if (day <= 22) {
+              DisplayResult(8)
+            }else {
+              DisplayResult(9)
+            }
+          }
+        
+          if (month == 10) {
+            if (day <= 24) {
+              DisplayResult(9)
+            }else{
+              DisplayResult(10)
+            }
+          }
+        
+          if (month == 11) {
+            if (day ==31) {
+              alert("There is no specified day in November.")
+            }else if (day <= 23) {
+              DisplayResult(10)
+            }else {
+              DisplayResult(11)
+            }
+          }
+        
+          if (month == 12) {
+            if (day <= 20) {
+              DisplayResult(11)
+            }else{
+              DisplayResult(0)
+            }
+          }
+        }
+        
+        function DisplayResult(selectedHoroscope) {
+          const Horoscopes = ["Capricorn", "Aquarius","Pisces","Aries","Taurus","Gemini","Cancer","Leo","Virgo","Libra","Scorpio","Sagittarius",]
+          const DomDivResult = document.querySelector("#div-result")
+          const DomResult = document.querySelector("#result")
+          DomDivResult.style.display = "inline-block";
+          DomResult.innerHTML = Horoscopes[selectedHoroscope] ;
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,154 @@
+
+ .entrance {
+    width:100%;
+    height: 300px;
+    background-color: #424b4c;
+    font-size: 40px;
+}
+
+
+.yourzodiac {
+    width: 30%;
+    height: 170px;
+    float: left;
+    color: antiquewhite;
+    margin-left: 250px;
+    margin-top: 100px;
+    text-align: center;
+}
+
+.another-zodiac {
+    width: 30%;
+    height: 170px;
+    float: right;
+    color: antiquewhite;
+    margin-top: 100px;
+    margin-right: 300px;
+    text-align: center;
+}
+
+button {
+    font-size: 40px;
+    text-align: center;
+    color: antiquewhite;
+    background-color: rgb(90, 33, 33);
+    border-radius: 15px;
+    position: absolute;
+    margin-top: 170px;
+
+}
+
+select {
+    border-radius: 10px;
+    font-size: 30px;
+}
+
+.harmony-result {
+    width: 100%;
+    height: 500px;
+    background-color: #424b4c;
+    color: antiquewhite;
+    font-size: 24px;
+    line-height: 42px;
+}
+
+.inline-result {
+    width: 50%;
+    text-align: center;
+    margin-left: 450px;
+}
+
+
+
+
+
+.sky-div {
+    width: 100%;
+    height: 400px;
+    background-color: #567486;
+}
+
+.sky {
+    color: antiquewhite;
+    text-align: center;
+    font-size: 55px;
+    line-height: 80px;
+    letter-spacing: 9px;
+    position: relative;
+    margin-top: -400px;
+}
+
+
+.but-still {
+    width: 100%;
+    height: 250px;
+}
+.still {
+    text-align: center;
+    font-size: 37px;
+    letter-spacing: 5px;
+    margin-top: 50px;
+}
+
+.mail-form {
+    position: relative;
+    bottom: 25px;
+    width: 900px;
+    height: 795px;
+    background-color: #ffffff;
+    border: 1px solid #b3b3b3;
+    border-radius: 4px;
+    margin: 0 auto;
+    box-shadow: 0 1px 10px #a7a7a7, inset 0 1px 0 #fff;
+    background: #fcfcfc;
+    border-radius: 5px;
+    font-weight: bolder;
+    color: #3c4b57;
+    letter-spacing: 3px;
+    padding-top: 20px;
+  }
+
+  .mail-input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid rgb(0, 0, 0);
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+    border-radius: 11px;
+  }
+
+.mail-column {
+  width: 50%;
+  margin-top: 6px;
+  padding-right: 40px;
+  margin: auto;
+}
+
+  .mail-label{
+    width: 100%;
+    margin-top: 6px;
+    margin-bottom: 16px;
+  }
+
+  .mail-textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid rgb(0, 0, 0);
+        margin-top: 6px;
+        margin-bottom: 16px;
+        resize: vertical;
+        border-radius: 13px;
+  }
+
+  .mail-button {
+        background-color: #355a85;
+        color: antiquewhite;
+        padding: 15px 40px;
+        border: 1px;
+        cursor: pointer;
+        margin-top: 210px;
+        margin-left: 50px;
+
+      }
+  
